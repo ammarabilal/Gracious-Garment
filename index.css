@@ -1,0 +1,308 @@
+ /* General Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+  }
+  
+  a {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+  }
+  
+  button {
+    border-radius: 20px;
+    border: 1px solid #4a4342;
+    background-color: black;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button.ghost {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+  
+  /* Container Styles */
+  .container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+  }
+  
+  /* Form Container Styles */
+  .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .sign-in-container {
+    left: 0;
+    z-index: 2;
+  }
+  
+  .sign-up-container {
+    left: 100%;
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .container.right-panel-active .sign-up-container {
+    transform: translateX(-100%);
+    opacity: 1;
+    z-index: 5;
+  }
+  
+  .container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+  }
+  
+  /* Overlay Styles */
+  .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+  }
+  
+  .overlay {
+    background: linear-gradient(to right,  #4a4342,  black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+  }
+  
+  .container.right-panel-active .overlay {
+    transform: translateX(50%);
+  }
+  
+  .overlay-panel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+  }
+  
+  .overlay-left {
+    transform: translateX(-20%);
+    left: 0;
+  }
+  
+  .overlay-right {
+    right: 0;
+    transform: translateX(0);
+  }
+  
+  .container.right-panel-active .overlay-left {
+    transform: translateX(0);
+  }
+  
+  .container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+  }
+  
+  
+  /* Specific Styling for Sign-In and Sign-Up Containers */
+  .sign-in-container, .sign-up-container {
+    background: #f6f5f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sign-in-container h1, .sign-up-container h1 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .sign-in-container input, .sign-up-container input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 14px;
+    background: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  .sign-in-container input:focus, .sign-up-container input:focus {
+    border-color: #4a4342;
+    outline: none;
+  }
+  
+  .sign-in-container button, .sign-up-container button {
+    margin-top: 10px;
+    width: 160px;
+    font-size: 14px;
+    /* height: 10%; */
+    align-items: center;
+  }
+  
+  .social-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .social-container a {
+    color: #fff;
+    background: #ce6359;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .social-container a:hover {
+    background: black;
+  }
+  
+  
+  /* Social Container Styling */
+  .social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 15px; /* Provides even spacing between icons */
+  }
+  
+  General Style for Social Links
+  .social-container a {
+    color: #fff;
+    background-color:rgb(222, 61, 8); /* Default black background */
+    border-radius: 50%; /* Makes the icons circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px; /* Icon circle size */
+    height: 45px; 
+    font-size: 18px; /* Icon font size */
+    transition: all 0.3s ease; /* Smooth hover animations */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Subtle shadow for depth */
+  }
+  
+  /* Individual Icon Colors (Optional) */
+  .social-container a.facebook {
+    background-color: #526a9c; /* Facebook Blue */
+  }
+  
+  .social-container a.pinterest {
+    background-color: #ce6359; /* Google Red */
+  }
+  
+  .social-container a.linkedin {
+    background-color: #5a92b0; /* LinkedIn Blue */
+  }
+  .social-container a.instagram {
+    background-color: #ff416c /* LinkedIn Blue */
+  }
+  
+  
+  /* Hover Effects for Social Icons */
+  .social-container a:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    background-color: #eb5021; /* Hover color for all icons */
+  }
+
+  /* Hover Effects for Individual Colors */
+  .social-container a.facebook:hover {
+    background-color: #365492; /* Darker Facebook blue */
+  }
+  
+  .social-container a.pinterest:hover {
+    background-color: #c33d2f; /* Darker Google red */
+  }
+  
+  .social-container a.instagram:hover {
+    background-color: #be153f; /* Darker LinkedIn blue */
+  }
+  
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 600px) {
+    .social-container a {
+      width: 40px;
+      height: 40px;
+      font-size: 16px; /* Slightly smaller icons */
+    }
+    .social-container {
+      gap: 10px; /* Closer spacing */
+    }
+  }
+  
