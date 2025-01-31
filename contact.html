@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/contact.css">
+  <title>Contact Us - Garment Store</title>
+</head>
+<body>
+   <!-- Header with Logo and Navigation -->
+   <header>
+    <div class="header-container">
+      <img src="/123.png" alt="Garment Store Logo" class="logo">
+      <span>Gracious Garments</span>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="login.html"></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">AboutUs</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="contact.html">ContactUs</a></li>
+        </ul>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Address:</strong> 123 Garment St, Fashion City</p>
+        <p><strong>Email:</strong> <a href="mailto:contact@garmentstore.com">contact@garmentstore.com</a></p>
+        <p><strong>Phone:</strong> +1-234-567-890</p>
+      </div>
+       <div class="contact-map">
+        <h2>Our Location</h2>
+        <iframe src="https://maps.google.com/maps?q=fashion%20city&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </div>
+  <!-- </section>
+  <div class="container">
+    <form id="form">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" id="name" required>
+                    <div class="error" id="nameError"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type="email" id="email" required>
+                    <div class="error" id="emailError"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" id="age" required>
+                    <div class="error" id="ageError"></div>
+                </td>
+            </tr>
+        </table><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<br><br> -->
+
+    <!-- Footer Section -->
+    <footer>
+                       
+<div class="footer">
+  <div class="container">
+      <div class="row">
+              <div class="footer-col-1">
+                <h1>Coming Soon</h1>
+                <div class="countdown">
+                    <span id="days">00</span> : 
+                    <span id="hours">00</span> : 
+                    <span id="minutes">00</span> : 
+                    <span id="seconds">00</span>
+                </div>
+        
+                <p>Get the latest updates, straight to your inbox:</p>
+                <input type="email" id="email" placeholder="Enter your email here">
+                <button id="subscribe">SUBSCRIBE</button>
+        
+            </div>                            
+          <div class="footer-col-2">
+              <img src="/123.png">
+              <span>Garment</span>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              </p>
+              <div class="social-media">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+              </div>
+              
+          </div>
+          <div class="footer-col-3">
+              <h3>Can We Help You</h3>
+              <ul>
+                <li><a href="#">SEND EMAIL</a></li><hr style="width: 50%;margin-left: 45px;">
+                <li><a href="#">graciousgarment.com.pk</a></li>
+                <li> <a href="contact.html"> Store Locator</a></li>
+              </ul>
+          </div>
+      </div>
+    <hr>
+      <p class="copyright">©2024 Gracious Garment. All Rights Reserved.</p>
+  
+  </footer>
+  
+      
+
+
+
+  <!-- JavaScript -->
+  <script>
+    // Toggle menu for mobile view
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+
+    }
+    // Set the countdown date and time (replace with your desired date)
+    const countDownDate = new Date("2024-12-25").getTime(); 
+
+// Update the countdown every second
+const x = setInterval(function() {
+
+    // Get today's date and time
+    const now = new Date().getTime();
+
+    // Find the distance between now and the countdown date
+    const distance = countDownDate - later;
+
+    // Time calculations for days, hours, minutes and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the elements with the appropriate IDs
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    // If the countdown is over, display a message
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+// Handle the subscribe button click
+document.getElementById("subscribe").addEventListener("click", function() {
+    // Get the email address
+    const email = document.getElementById("email").value;
+
+    // Perform subscription logic here (e.g., send email to server)
+    alert("Thank you for subscribing! You will receive updates soon.");
+});
+document.getElementById("form").addEventListener("submit", function(event) {
+            let isValid = true;
+            
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let age = document.getElementById("age").value.trim();
+            
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("ageError").textContent = "";
+            
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Name is required.";
+                isValid = false;
+            }
+            if (email === "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById("emailError").textContent = "Valid email is required.";
+                isValid = false;
+            }
+            if (age === "" || age [/^{0-9}(8)$/]) {
+                document.getElementById("ageError").textContent = "Valid password is required.";
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+
+</script>  
+
+   
+</body>
+</html>

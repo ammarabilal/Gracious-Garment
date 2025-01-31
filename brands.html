@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Garment Store</title>
+  <link rel="stylesheet" href="css/brands.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <img src="/123.png" alt="Garment Store Logo" class="logo">
+      <span>Gracious Garments</span>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="login.html"></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">AboutUs</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="contact.html">ContactUs</a></li>
+        </ul>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Brand Filter Section -->
+  <section class="filter">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('VanHeusen')">Van Heusen</button>
+    <button onclick="filterProducts('Zara')">Zara</button>
+    <button onclick="filterProducts('outfitters')">Outfitters</button>
+    
+  </section>
+
+  <!-- Products Section -->
+  <section class="products">
+    <!-- Dummy Product for Van Heusen (Men) -->
+    <div class="product-card VanHeusen">
+      <img src="https://www.shopmanto.com/cdn/shop/files/13_01383df8-d36f-4746-b4bc-93a5c649c15b.jpg?v=1717707992&width=320" alt="Men's Product">
+      <h3>Meraas Odhni</h3>
+      <p>Brand: Van Heusen</p>
+      <p>Price: Rs3600</p>
+      <button onclick="openModal('Men\'s Shirt', 'Van Heusen', 'Rs3600', 'A stylish and comfortable shirt made with premium fabric, perfect for any occasion.')">View Details</button>
+    </div>
+    <div class="product-card VanHeusen">
+        <img src="https://www.shopmanto.com/cdn/shop/files/1_eef20cb5-f202-40a3-be47-f63ba224e7da.jpg?v=1711950205&width=400" alt="Men's Product">
+        <h3>Cloud White - Lucknow (Men)</h3>
+        <p>Brand: Van Heusen</p>
+        <p>Price: Rs8500 </p>
+        <button onclick="openModal('Men\'s Shirt', 'Van Heusen', 'Rs8500', 'A stylish and comfortable shirt made with premium fabric, perfect for any occasion.')">View Details</button>
+      </div>
+      <div class="product-card VanHeusen">
+        <img src="https://i.pinimg.com/474x/f1/7e/5c/f17e5c99c104e8f77e77734f0ecfe394.jpg" alt="Men's Product">
+        <h3>Deep Teal - Sherwani</h3>
+        <p>Brand: Van Heusen</p>
+        <p>Price: Rs9500</p>
+        <button onclick="openModal('Men\'s Shirt', 'Van Heusen', 'Rs9500', 'A stylish and comfortable shirt made with premium fabric, perfect for any occasion.')">View Details</button>
+      </div>
+  
+      <div class="product-card Zara">
+        <img src="https://www.shopmanto.com/cdn/shop/files/417_e4b92997-6a58-44ae-a8d7-6cbcb20c33b0.jpg?crop=center&height=540&v=1735209365&width=360" alt="Men's Product">
+        <h3>Riwayat Vasket - Green</h3>
+        <p>Brand: Zara</p>
+        <p>Price: Rs7500</p>
+        <button onclick="openModal('Men\'s Shirt', 'Zara', 'Rs7500', 'A stylish and comfortable shirt made with premium fabric, perfect for any occasion.')">View Details</button>
+      </div>
+      <div class="product-card Zara">
+        <img src="https://www.shopmanto.com/cdn/shop/files/421.jpg?crop=center&height=540&v=1714323302&width=360" alt="Men's Product">
+        <h3>Midnight Blue - Lucknow</h3>
+        <p>Brand: Zara</p>
+        <p>Price: Rs8500</p>
+        <button onclick="openModal('Men\'s Shirt', 'Zara', 'Rs8500', 'A stylish and comfortable shirt made with premium fabric, perfect for any occasion.')">View Details</button>
+      </div>
+      <div class="product-card Zara">
+        <img src="https://www.shopmanto.com/cdn/shop/files/DSC_5359.jpg?crop=center&height=540&v=1702884356&width=360" alt="Men's Product">
+        <h3>Zamana Overshirt - Ash Blue</h3>
+        <p>Brand:  Zara</p>
+        <p>Price: Rs7500</p>
+        <button onclick="openModal('Men\'s Shirt', ' Zara', 'Rs7500', 'A stylish and comfortable shirt made with premium fabric, perfect for any occasion.')">View Details</button>
+      </div>
+  
+  
+  
+  
+      <div class="product-card outfitters">
+          <img src="https://www.shopmanto.com/cdn/shop/files/13_7bf3c63c-b99a-4cc3-b5db-25f0b77b6a11.jpg?crop=center&height=540&v=1711029369&width=360" alt="Men's Product">
+          <h3>Emerald Green - Lucknow</h3>
+          <p>Brand:"outfitters",</p>
+          <p>Price: Rs8500</p>
+          <button onclick="openModal('Men\'s Shirt', 'outfitters', 'Rs8500', 'A stylish and comfortable shirt made with premium fabric, perfect for any occasion.')">View Details</button>
+        </div>
+        <div class="product-card outfitters">
+          <img src="https://www.shopmanto.com/cdn/shop/files/350.jpg?crop=center&height=540&v=1712304619&width=360" alt="Men's Product">
+          <h3>Safar Shirt - Charcoal Grey</h3>
+          <p>Brand: outfitters</p>
+          <p>Price: Rs3950</p>
+          <button onclick="openModal('Men\'s Shirt', 'outfitters', 'Rs3950', 'A stylish and comfortable shirt made with premium fabric, perfect for any occasion.')">View Details</button>
+        </div>
+        <div class="product-card outfitters">
+          <img src="https://www.shopmanto.com/cdn/shop/files/412_df47c60b-3090-424e-9448-a74df20fd55a.jpg?v=1735209760&width=400" alt="Men's Product">
+          <h3>Riwayat Vasket - Purple</h3>
+          <p>Brand: outfitters</p>
+          <p>Price: Rs7500</p>
+          <button onclick="openModal('Men\'s Shirt', 'outfitters', 'Rs7500', 'A stylish and comfortable shirt made with premium fabric, perfect for any occasion.')">View Details</button>
+        </div>
+        <div class="product-card outfitters">
+          <img src="https://www.shopmanto.com/cdn/shop/files/377.jpg?v=1735200480&width=400" alt="Men's Product">
+          <h3>Bagh-e-Mughal Overshirt - Brown & Green</h3>
+          <p>Brand:outfitters </p>
+          <p>Price:Rs8200</p>
+          <button onclick="openModal('Men\'s Shirt', 'outfitters', 'Rs8200', 'Unisex Loose fit button down is the perfect layer for winter. Crafted from 100% cotton this khaddar overshirt features calligraphy of poetry by Allama Iqbal along with beautiful Urdu words.')">View Details</button>
+        </div>
+ 
+    </div>
+
+
+
+    <!-- Dummy Product for Zara (Women) -->
+    <div class="product-card Zara ">
+      <img src="https://www.shopmanto.com/cdn/shop/files/13_ca56ac0a-3356-48ed-921b-19eb683093a3.jpg?v=1736968723&width=400" alt="Women's Product">
+      <h3>BULBUL CO-ORD SET BEIGE & GREEN</h3>
+      <p>Brand: Zara</p>
+      <p>Price: Rs9200</p>
+      <button onclick="openModal('Women\'s Dress', 'Zara', 'Rs9200', '2 Piece matching khaddar set, featuring versatile fit & Urdu calligraphy of poetry by Makhdoom Mohiuddin. Pair it with your favorite odhni or dupatta to complete a look.')">View Details</button>
+    </div>
+    <div class="product-card Zara">
+        <img src="https://www.shopmanto.com/cdn/shop/files/10_46389d94-bb17-431e-a8f9-64fe1ada0af6.jpg?v=1722683375&width=1300" alt="Women's Product">
+        <h3>SHAJAR CO-ORD SET BLACK & GREEN</h3>
+        <p>Brand:Zara </p>
+        <p>Price:Rs9400</p>
+        <button onclick="openModal('Women\'s Dress', 'Zara', 'Rs9400', 'The Shajar Co-ord Set, made from Soft Crepe, is a 2 Piece Set with a Long-Length A-Line Shirt and Straight Pants. This modern cut features words like Khuwaab, Khayaal, Chandni, Shab Etc.')">View Details</button>
+      </div>
+      <div class="product-card Zara">
+        <img src="https://www.shopmanto.com/cdn/shop/products/DSC02303.jpg?crop=center&height=540&v=1680857607&width=360" alt="Women's Product">
+        <h3>RUBBY RED RESYL SET</h3>
+        <p>Brand: Zara</p>
+        <p>Price: Rs8800</p>
+        <button onclick="openModal('Women\'s Dress', 'Zara', 'Rs8800', 'Premium Lawn Printed Two Piece Set, Featuring the Words of Nida Fazli. Available in 5 Colors with Matching Separate Dupattas.Hurry!')">View Details</button>
+      </div>
+      <div class="product-card outfitters ">
+        <img src="https://www.shopmanto.com/cdn/shop/files/17_041543ef-e870-480b-9376-e4ea640ef4fc.jpg?v=1711690780&width=1300" alt="Women's Product">
+        <h3>SURAJ SHRUG SHADES OF DAWN</h3>
+        <p>Brand:outfitters</p>
+        <p>Price: Rs6950</p>
+        <button onclick="openModal('Women\'s Dress', 'outfitters', 'Rs6950', 'Printed Outerwear Shrug Made from Soft Crepe Featureing Calligraphy of Urdu Letters. Available in 2 Colors!Can be Paired with a Matching Inner Set.')">View Details</button>
+      </div>
+      <div class="product-card outfitters">
+        <img src="https://www.shopmanto.com/cdn/shop/files/48_66932550-9cf6-4d31-a0d4-2154b2770e02.jpg?crop=center&height=540&v=1736146220&width=360" alt="Women's Product">
+        <h3>BREEZE CO-ORD SET PINK</h3>
+        <p>Brand: outfitters</p>
+        <p>Price: Rs9400</p>
+        <button onclick="openModal('Women\'s Dress', 'outfitters', 'Rs9400', 'A 2-Piece solid co-ord set made from BREEZE® Technology Butter Fabric. With a Loose-Fit Paneled Shirt, Straight Pants, this Smooth, Breezy Breathable Textured set is perfect for an comfortable yet elegant look.')">View Details</button>
+      </div>
+      <div class="product-card outfitters ">
+        <img src="https://www.shopmanto.com/cdn/shop/files/438.jpg?v=1714330702&width=1300" alt="Women's Product">
+        <h3>MIDNIGHT BLUE MIRA SET</h3>
+        <p>Brand: outfitters</p>
+        <p>Price: Rs9800</p>
+        <button onclick="openModal('Women\'s Dress', 'outfitters', 'Rs9800', 'Printed Outerwear Shrug Made from Soft Crepe Featureing Calligraphy of Urdu Letters. Available in 2 Colors! Can be Paired with a Matching Inner Set.')">View Details</button>
+      </div>
+      <div class="product-card outfitters">
+          <img src="https://www.shopmanto.com/cdn/shop/files/3_9437431a-6f37-4309-ba11-9b7f0a550aed.jpg?v=1725967898&width=400" alt="Women's Product">
+          <h3>HAYAT ANARKALI CREAM AND MINT</h3>
+          <p>Brand: outfitters</p>
+          <p>Price: Rs6950</p>
+          <button onclick="openModal('Women\'s Dress', 'outfitters', 'Rs6950', 'Printed Long Length Flowy Anarkali made from Premium Lawn, with Swiss Lawn Matching Separate Dupattas. Featuring the words of Makhdoom Mohiuddin, Available in 2 Colors!')">View Details</button>
+        </div>
+             <div class="product-card  VanHeusen ">
+          <img src="https://www.shopmanto.com/cdn/shop/files/11_3da012d1-15ee-49ed-8a2b-8e9fa4af31b0.jpg?v=1722684435&width=1300" alt="Women's Product">
+          <h3>SEHER CO-ORD SET BEIGE AND GREEN</h3>
+          <p>Brand: Van Heusen</p>
+          <p>Price: Rs9200</p>
+          <button onclick="openModal('Women\'s Dress', 'Van Heusen', 'Rs9200', 'The Seher Co-ord Set, made from Soft Crepe, is a 2 Piece Set with a Long-Length Shirt and Straight Pants. This modern cut features beautiful poetry by Allama Iqbal.')">View Details</button>
+        </div>
+        <div class="product-card  VanHeusen ">
+          <img src="https://www.shopmanto.com/cdn/shop/files/5_5d7ee128-84cb-44de-bad2-6e5180b64d96.jpg?v=1736248051&width=1300" alt="Women's Product">
+          <h3>DEEP TEAL RAYA SET</h3>
+          <p>Brand:Van Heusen</p>
+          <p>Price: Rs9800 </p>
+          <button onclick="openModal('Women\'s Dress', 'Van Heusen', 'Rs9800', 'Ultra-soft solid 2-piece matching set, a short shirt perfectly paired with a relaxed-fit shalwar. Designed to make you feel at ease without compromising on style, every day.')">View Details</button>
+        </div>
+        <div class="product-card  VanHeusen ">
+          <img src="https://www.shopmanto.com/cdn/shop/files/1_6f645eba-9e19-4c30-9aca-a79096adea86.jpg?v=1717863530&width=1300" alt="Women's Product">
+          <h3>QALB SET-OLIVE GREEN</h3>
+          <p>Brand:Van Heusen</p>
+          <p>Price: Rs9400</p>
+          <button onclick="openModal('Women\'s Dress', 'Van Heusen', 'Rs9400', 'Printed Two Piece Soft Crepe Co-Ord Set, Featuring Random Urdu Letter Calligraphed on the Shirt. Available in 2 Colors!')">View Details</button>
+        </div>
+
+
+<!-- dummy- products for kids-->
+<div class="product-card  VanHeusen">
+  <img src="https://www.libasejamila.com/wp-content/uploads/2021/06/girls-dresses-Pakistani-21-scaled.jpg" alt="Kids Product">
+  <h3>HAYAT ANARKALI CREAM AND MINT</h3>
+  <p>Brand: Van Heusen</p>
+  <p>Price: Rs8000</p>
+  <button onclick="openModal('Women\'s Dress', 'Van Heusen', 'Rs8000', 'Top Fabric: Digital Printed Lawn Stitched Top, Bottom Fabric: Cotton stitched Dyed Trouser, DIGITAL PRINTED SUIT, DYED TROUSER, STITCHED, 2 ')">View Details</button>
+</div>
+<div class="product-card  VanHeusen">
+  <img src="https://www.libasejamila.com/wp-content/uploads/2022/07/Pakistani-kids-clothes-2.jpg" alt="Kids Product">
+  <h3>Urooj Kurta - Plum</h3>
+  <p>Brand: Van Heusen</p>
+  <p>Price: 7950</p>
+  <button onclick="openModal('Women\'s Dress', 'Van Heusen', 'Rs7950', 'Top: Soft Cotton Kameez with Heavy Embroidery work and Piping on Daman., Bottom: Soft Cotton Trouser with Embroidery')">View Details</button>
+</div>
+<div class="product-card Zara">
+  <img src="https://www.libasejamila.com/wp-content/uploads/2022/03/kids-Pakistani-clothes-5-scaled.jpg" alt="Kids Product">
+  <h3>Dilkash Kurta </h3>
+  <p>Brand: Zara</p>
+  <p>Price: Rs5800</p>
+  <button onclick="openModal('Women\'s Dress', 'Zara', 'Rs5800', 'Soft Cotton Kameez and Piping on Daman., Bottom: Soft Cotton Trouser ')">View Details</button>
+</div>
+<div class="product-card Zara">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd__LHcf_DEbhMwhhB2QsKw-kVT_S4QkcFSul6jn8m8GEsCNaYIZ45amAO_YYAnD96Yjg&usqp=CAU" alt="Kids Product">
+  <h3>Naqsh Co-ord Set - Graphite & Magenta</h3>
+  <p>Brand: Zara</p>
+  <p>Price: Rs8400</p>
+  <button onclick="openModal('Women\'s Dress', 'Zara', 'Rs8400', 'Party-dress-for-Girls-, Available in 2 Colors!')">View Details</button>
+</div>
+<div class="product-card outfitters"><img src="https://www.libasejamila.com/wp-content/uploads/2023/06/Party-dress-for-Girls-5-scaled-400x600.jpg" alt="Kids Product">
+  <h3>Kalidaar Co-Ord - Teal Blue</h3>
+  <p>Brand: outfitters</p>
+  <p>Price: Rs4400</p>
+  <button onclick="openModal('Kids\'s Dress', 'outfitters', 'Rs4400', 'Party-dress-for-Girls-5-')">View Details</button>
+</div>
+<div class="product-card outfitters"><img src="https://www.ansabjahangirstudio.com/images/thumbs/0008132_gradient-oasis-girl_700.jpeg" alt="Kids Product">
+  <h3>Gulnaar Co-Ord Set </h3>
+  <p>Brand: outfitters</p>
+  <p>Price: Rs5800</p>
+  <button onclick="openModal('Kids\'s Dress', 'outfitters', 'Rs5800', 'Soft Cotton Kameez with Heavy Embroidery work and Piping on Daman., Bottom: Soft Cotton Trouser with Embroidery. ')">View Details</button>
+</div>
+
+
+  </section>
+
+  <!-- Modal -->
+  <div id="product-modal" class="modal" style="display: none;">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-content">
+
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-details">
+        <h2 id="modal-title"></h2>
+        <p id="modal-brand" class="modal-brand"></p>
+        <p id="modal-price" class="modal-price"></p>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <div class="container">
+          <div class="row">
+                  <div class="footer-col-1">
+                    <h1>Coming Soon</h1>
+                    <div class="countdown">
+                        <span id="days">00</span> : 
+                        <span id="hours">00</span> : 
+                        <span id="minutes">00</span> : 
+                        <span id="seconds">00</span>
+                    </div>
+            
+                    <p>Get the latest updates, straight to your inbox:</p>
+                    <input type="email" id="email" placeholder="Enter your email here">
+                    <button id="subscribe">SUBSCRIBE</button>
+            
+                </div>                            
+              <div class="footer-col-2">
+                  <img src="/123.png">
+                  <span>Garment</span>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+                  <div class="social-media">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                  </div>
+                  
+              </div>
+              <div class="footer-col-3">
+                  <h3>Can We Help You</h3>
+                  <ul>
+                    <li><a href="#">SEND EMAIL</a></li><hr style="width: 50%;margin-left: 45px;">
+                    <li><a href="#">graciousgarment.com.pk</a></li>
+                    <li> <a href="contact.html"> Store Locator</a></li>
+                  </ul>
+              </div>
+          </div>
+        <hr>
+      <p class="copyright">©2024 Gracious Garment. All Rights Reserved.</p>
+  
+  </footer>
+
+  <script>
+   function toggleMenu() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('active');
+}
+
+    // Function to open modal with product details
+    function openModal(title, brand, price, description) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-brand').innerText = "Brand: " + brand;
+      document.getElementById('modal-price').innerText = "Price: " + price;
+      document.getElementById('modal-description').innerText = description;
+      document.getElementById('product-modal').style.display = 'block';
+      
+
+    }
+
+    // Function to close modal
+    function closeModal() {
+      document.getElementById('product-modal').style.display = 'none';
+    }
+
+    // Function to filter products by brand
+    function filterProducts(brand) {
+      const products = document.querySelectorAll('.product-card');
+      products.forEach(product => {
+        if (brand === 'all' || product.classList.contains(brand)) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+
+  </script>
+</body>
+</html>
